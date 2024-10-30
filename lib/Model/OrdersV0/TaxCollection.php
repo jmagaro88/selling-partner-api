@@ -261,7 +261,7 @@ class TaxCollection extends BaseModel implements ModelInterface, ArrayAccess, \J
     public function setResponsibleParty($responsible_party)
     {
         $allowedValues = $this->getResponsiblePartyAllowableValues();
-        if (!is_null($responsible_party) &&!in_array(strtoupper($responsible_party), $allowedValues, true)) {
+        if (false && !is_null($responsible_party) && !in_array(strtoupper($responsible_party), $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value '%s' for 'responsible_party', must be one of '%s'",
